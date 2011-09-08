@@ -1,0 +1,29 @@
+<h1>Listing products</h1>
+
+<table>
+  <tr>
+    <th>Productname</th>
+    <th>Price</th>
+    <th>Weight</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @products.each do |product| %>
+  <tr>
+    <td><%= product.productname %></td>
+    <td><%= product.price %></td>
+    <td><%= product.weight %></td>
+  <% if current_user.role == "co-admin" %>  <td><%= link_to 'Show', product %></td>
+  <% elsif current_user.role == "admin"%>
+    <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    <td><%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></td>
+  <% end%>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<% if current_user.role == "admin" %><%= link_to 'New Product', new_product_path %><%end%>
