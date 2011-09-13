@@ -42,7 +42,7 @@ before_filter :authenticate_user!
   # POST /products.xml
   def create
     @product = Product.new(params[:product])
-
+   puts "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$",params    
     respond_to do |format|
       if @product.save
         format.html { redirect_to(@product, :notice => 'Product was successfully created.') }

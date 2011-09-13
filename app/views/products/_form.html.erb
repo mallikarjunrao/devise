@@ -1,5 +1,5 @@
 <% if current_user.role == "admin" %>
-<%= form_for(@product) do |f| %>
+<%= form_for(@product,:html => { :multipart => true } ) do |f| %>
   <% if @product.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
@@ -12,11 +12,18 @@
     </div>
   <% end %>
 
-  <div class="field">
+<%= f.collection_select(:category_id, Category.find(:all), :id, :name ,{:prompt=> 'Select Category'}, :class => 'droplist') %>
+<br>
+<div id="subcategories">
+<%= f.collection_select( :subcategory_id, [], :id, :name ,{:prompt=> 'Select Subcategory'}, :class => 'droplist') %><br>
+</div>  
+<div class="field">
     <%= f.label :productname %><br />
     <%= f.text_field :productname %>
   </div>
   <div class="field">
+
+
     <%= f.label :price %><br />
     <%= f.text_field :price %>
   </div>
@@ -24,6 +31,16 @@
     <%= f.label :weight %><br />
     <%= f.text_field :weight %>
   </div>
+
+<div class="field">
+	<%= f.label :Image %>
+	<%= f.file_field :avatar %>
+	</div><br />
+
+<div class="field">
+	<%= f.label :File %>
+	<%= f.file_field :file %>
+	</div><br />
   <div class="actions">
     <%= f.submit %>
   </div>

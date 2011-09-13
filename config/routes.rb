@@ -1,5 +1,13 @@
 Devise::Application.routes.draw do
-  resources :products
+  resources :subcategories do
+    get   "load_subcategories",     :on=> :collection
+ end
+
+  resources :categories do 
+    
+  end
+
+  resources :products 
 
   devise_for :users
 
@@ -54,7 +62,7 @@ Devise::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => "homes#index"
+   root :to => "products#index"
 
   # See how all your routes lay out with "rake routes"
 

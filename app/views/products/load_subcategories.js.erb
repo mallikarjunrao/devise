@@ -1,0 +1,1 @@
+ $("#subcategories").html("<%= escape_javascript(collection_select :product,:subcategory_id,@subcategories,:id,:name,:prompt=>"Select a Subcategory", :class => 'droplist')%>");

@@ -3478,3 +3478,2453 @@ Started GET "/" for 127.0.0.1 at 2011-09-08 13:39:38 +0530
   [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
 Rendered homes/index.html.erb within layouts/application (22.5ms)
 Completed 200 OK in 26ms (Views: 25.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-09-08 15:10:54 +0530
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-08 15:10:54 +0530
+  Processing by HomesController#index as HTML
+Rendered homes/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-08 15:11:01 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.2ms)
+Rendered devise/sessions/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 58ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-09-08 15:11:02 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (1.2ms)
+Rendered devise/registrations/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 27ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-08 15:11:06 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.2ms)
+Rendered devise/sessions/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 28ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-09-08 15:11:17 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "user"=>{"email"=>"mallikarjunrao@indigenius.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'mallikarjunrao@indigenius.com' LIMIT 1[0m
+Completed   in 92ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "user"=>{"email"=>"mallikarjunrao@indigenius.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Rendered devise/shared/_links.erb (1.2ms)
+Rendered devise/sessions/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 83ms (Views: 9.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-09-08 15:11:28 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "user"=>{"email"=>"mallikarjunrao@indigenius.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'mallikarjunrao@indigenius.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE `users` SET `current_sign_in_at` = '2011-09-08 09:41:28', `sign_in_count` = 2, `updated_at` = '2011-09-08 09:41:28' WHERE `users`.`id` = 1
+  [1m[36mSQL (41.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 141ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-08 15:11:28 +0530
+  Processing by HomesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered homes/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-09-08 15:11:32 +0530
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-08 15:11:32 +0530
+  Processing by HomesController#index as HTML
+Rendered homes/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 42.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-08 15:11:49 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.1ms)
+Rendered devise/sessions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 28ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-09-08 15:12:19 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (1.2ms)
+Rendered devise/registrations/new.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 28ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2011-09-08 15:12:21 +0530
+  Processing by Devise::PasswordsController#new as HTML
+Rendered devise/shared/_links.erb (1.3ms)
+Rendered devise/passwords/new.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 57ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2011-09-08 15:12:26 +0530
+  Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "user"=>{"email"=>"mallikarjunrao@indigenius.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'mallikarjunrao@indigenius.com' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`reset_password_token` = '58icu5zK5r68nH_ZCVZ5' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE `users` SET `reset_password_token` = '58icu5zK5r68nH_ZCVZ5', `updated_at` = '2011-09-08 09:42:26' WHERE `users`.`id` = 1[0m
+  [1m[35mSQL (33.5ms)[0m  COMMIT
+Rendered devise/mailer/reset_password_instructions.html.erb (0.6ms)
+
+Sent mail to mallikarjunrao@indigenius.com (5517ms)
+Date: Thu, 08 Sep 2011 15:12:26 +0530
+From: mallikarjunrao@indigenius.com
+To: mallikarjunrao@indigenius.com
+Message-ID: <4e688e028bdab_b0b54cb94012448@malli.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello mallikarjunrao@indigenius.com!</p>
+
+<p>Someone has requested a link to change your password, and you can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/users/password/edit?reset_password_token=58icu5zK5r68nH_ZCVZ5">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 5586ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-08 15:12:32 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.1ms)
+Rendered devise/sessions/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 59ms (Views: 9.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for 127.0.0.1 at 2011-09-08 15:12:37 +0530
+  Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+Rendered devise/shared/_links.erb (1.3ms)
+Rendered devise/passwords/edit.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 29ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2011-09-08 15:12:44 +0530
+  Processing by Devise::PasswordsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "user"=>{"reset_password_token"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Change my password"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`reset_password_token` = '58icu5zK5r68nH_ZCVZ5' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('mallikarjunrao@indigenius.com')) AND (`users`.id <> 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('mallikarjunrao@indigenius.com')) AND (`users`.id <> 1) LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mUPDATE `users` SET `password_salt` = '$2a$10$JgkUSfgPGZmPG8p3xs6Pfu', `encrypted_password` = '$2a$10$JgkUSfgPGZmPG8p3xs6PfugyFLwoJCzC0P5YtprSGLsIPIzs6EkGi', `reset_password_token` = NULL, `updated_at` = '2011-09-08 09:42:44' WHERE `users`.`id` = 1[0m
+  [1m[35mSQL (36.8ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2011-09-08 09:41:28', `current_sign_in_at` = '2011-09-08 09:42:44', `sign_in_count` = 3, `updated_at` = '2011-09-08 09:42:44' WHERE `users`.`id` = 1
+  [1m[36mSQL (31.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 167ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-08 15:12:44 +0530
+  Processing by HomesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered homes/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 34.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-08 15:13:44 +0530
+  Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT `products`.* FROM `products`
+Rendered products/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 62ms (Views: 10.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-09-08 15:13:48 +0530
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-08 15:13:48 +0530
+  Processing by ProductsController#index as HTML
+Completed   in 6ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-08 15:13:48 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.1ms)
+Rendered devise/sessions/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 27ms (Views: 9.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 15:13:57 +0530
+  Processing by ProductsController#new as HTML
+Completed   in 7ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-08 15:13:57 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.1ms)
+Rendered devise/sessions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 27ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-09-08 15:14:04 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "user"=>{"email"=>"mallikarjunrao@indigenius.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'mallikarjunrao@indigenius.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2011-09-08 09:42:44', `current_sign_in_at` = '2011-09-08 09:44:05', `sign_in_count` = 4, `updated_at` = '2011-09-08 09:44:05' WHERE `users`.`id` = 1
+  [1m[36mSQL (49.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/products/new
+Completed 302 Found in 144ms
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 15:14:05 +0530
+  Processing by ProductsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered products/_form.html.erb (6.2ms)
+Rendered products/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 36ms (Views: 12.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-09-08 15:14:07 +0530
+  Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT `products`.* FROM `products`
+Rendered products/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 35ms (Views: 10.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 15:15:39 +0530
+  Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered products/_form.html.erb (37.9ms)
+Rendered products/new.html.erb within layouts/application (40.8ms)
+Completed 200 OK in 69ms (Views: 43.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2011-09-08 15:15:51 +0530
+  Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "product"=>{"productname"=>"", "price"=>"", "weight"=>""}, "commit"=>"Create Product"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mdescribe `products`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `products` (`productname`, `price`, `weight`, `created_at`, `updated_at`) VALUES ('', NULL, NULL, '2011-09-08 09:45:51', '2011-09-08 09:45:51')
+  [1m[36mSQL (49.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/products/3
+Completed 302 Found in 83ms
+
+
+Started GET "/products/3" for 127.0.0.1 at 2011-09-08 15:15:52 +0530
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1
+Rendered products/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 35ms (Views: 9.9ms | ActiveRecord: 50.3ms)
+
+
+Started GET "/products/3/edit" for 127.0.0.1 at 2011-09-08 15:15:54 +0530
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1[0m
+Rendered products/_form.html.erb (7.1ms)
+Rendered products/edit.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 38ms (Views: 13.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-09-08 15:15:56 +0530
+  Processing by ProductsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+Rendered products/index.html.erb within layouts/application (40.3ms)
+Completed 200 OK in 69ms (Views: 43.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-09-08 15:16:25 +0530
+  Processing by ProductsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+Rendered products/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 36ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 15:16:40 +0530
+  Processing by ProductsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered products/_form.html.erb (6.8ms)
+Rendered products/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 71ms (Views: 13.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-09-08 15:17:38 +0530
+  Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT `products`.* FROM `products`
+Rendered products/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 38ms (Views: 11.6ms | ActiveRecord: 0.2ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20110907135730)
+Migrating to CreateProducts (20110908073616)
+Migrating to CreateCategories (20110908123731)
+  [1m[35mSQL (123.4ms)[0m  CREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (30.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110908123731')[0m
+Migrating to CreateSubcategories (20110908123953)
+  [1m[35mSQL (106.9ms)[0m  CREATE TABLE `subcategories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `categorie_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (32.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110908123953')[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mdescribe `categories`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `categories`
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `products`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `products`
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `subcategories`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `subcategories`
+  [1m[36mSQL (0.4ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `users`
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-09-08 18:13:37 +0530
+
+ActionController::RoutingError (No route matches "/models/sign_in"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-08 18:13:40 +0530
+  Processing by ProductsController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+Rendered products/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 137ms (Views: 11.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-09-08 18:13:48 +0530
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered categories/index.html.erb within layouts/application (45.3ms)
+Completed 200 OK in 67ms (Views: 48.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-09-08 18:13:49 +0530
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (5.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered categories/new.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 37ms (Views: 29.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-09-08 18:13:52 +0530
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "category"=>{"name"=>"category1", "description"=>""}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  describe `categories`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `categories` (`name`, `description`, `created_at`, `updated_at`) VALUES ('category1', '', '2011-09-08 12:43:52', '2011-09-08 12:43:52')[0m
+  [1m[35mSQL (43.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/1
+Completed 302 Found in 69ms
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2011-09-08 18:13:52 +0530
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered categories/show.html.erb within layouts/application (52.4ms)
+Completed 200 OK in 63ms (Views: 55.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-09-08 18:13:54 +0530
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered categories/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 36ms (Views: 29.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subcategories" for 127.0.0.1 at 2011-09-08 18:13:57 +0530
+  Processing by SubcategoriesController#index as HTML
+  [1m[36mSubcategory Load (0.2ms)[0m  [1mSELECT `subcategories`.* FROM `subcategories`[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered subcategories/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 46ms (Views: 25.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subcategories/new" for 127.0.0.1 at 2011-09-08 18:13:59 +0530
+  Processing by SubcategoriesController#new as HTML
+Rendered subcategories/_form.html.erb (33.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered subcategories/new.html.erb within layouts/application (56.6ms)
+Completed 200 OK in 67ms (Views: 59.8ms | ActiveRecord: 44.4ms)
+
+
+Started GET "/subcategories/new" for 127.0.0.1 at 2011-09-08 18:16:59 +0530
+  Processing by SubcategoriesController#new as HTML
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` WHERE `categories`.`status` = 1
+Mysql2::Error: Unknown column 'categories.status' in 'where clause': SELECT `categories`.* FROM `categories` WHERE `categories`.`status` = 1
+Rendered subcategories/_form.html.erb (59.1ms)
+Rendered subcategories/new.html.erb within layouts/application (60.1ms)
+Completed 500 Internal Server Error in 70ms
+
+ActionView::Template::Error (Mysql2::Error: Unknown column 'categories.status' in 'where clause': SELECT `categories`.* FROM `categories` WHERE `categories`.`status` = 1):
+    11:     </div>
+    12:   <% end %>
+    13: 
+    14: <%= f.collection_select :categorie_id, Category.where(:status => true).all, :id, :name ,{:prompt=> 'Select Category'} %>
+    15:   <div class="field">
+    16:     <%= f.label :name %><br />
+    17:     <%= f.text_field :name %>
+  app/views/subcategories/_form.html.erb:14:in `block in _app_views_subcategories__form_html_erb___541372512_83907880__792354498'
+  app/views/subcategories/_form.html.erb:1:in `_app_views_subcategories__form_html_erb___541372512_83907880__792354498'
+  app/views/subcategories/new.html.erb:3:in `_app_views_subcategories_new_html_erb___873899168_84091570__62816423'
+  app/controllers/subcategories_controller.rb:29:in `new'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (69.6ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (94.8ms)
+
+
+Started GET "/subcategories/new" for 127.0.0.1 at 2011-09-08 18:17:20 +0530
+  Processing by SubcategoriesController#new as HTML
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered subcategories/_form.html.erb (20.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered subcategories/new.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 55ms (Views: 47.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/subcategories" for 127.0.0.1 at 2011-09-08 18:17:24 +0530
+  Processing by SubcategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "subcategory"=>{"categorie_id"=>"1", "name"=>"asdfasdfa", "description"=>"sdfasdf"}, "commit"=>"Create Subcategory"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  describe `subcategories`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `subcategories` (`name`, `description`, `categorie_id`, `created_at`, `updated_at`) VALUES ('asdfasdfa', 'sdfasdf', 1, '2011-09-08 12:47:25', '2011-09-08 12:47:25')[0m
+  [1m[35mSQL (30.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/subcategories/1
+Completed 302 Found in 44ms
+
+
+Started GET "/subcategories/1" for 127.0.0.1 at 2011-09-08 18:17:25 +0530
+  Processing by SubcategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubcategory Load (0.2ms)[0m  [1mSELECT `subcategories`.* FROM `subcategories` WHERE `subcategories`.`id` = 1 LIMIT 1[0m
+Rendered subcategories/show.html.erb within layouts/application (11.8ms)
+Completed 500 Internal Server Error in 22ms
+
+ActionView::Template::Error (uninitialized constant Subcategory::Categorie):
+    12: 
+    13: <p>
+    14:   <b>Categorie:</b>
+    15:   <%= @subcategory.categorie %>
+    16: </p>
+    17: 
+    18: 
+  app/views/subcategories/show.html.erb:15:in `_app_views_subcategories_show_html_erb__777276233_86252750__62816423'
+  app/controllers/subcategories_controller.rb:18:in `show'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (96.4ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (100.9ms)
+
+
+Started GET "/subcategories/1" for 127.0.0.1 at 2011-09-08 18:18:18 +0530
+  Processing by SubcategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSubcategory Load (0.0ms)[0m  SELECT `subcategories`.* FROM `subcategories` WHERE `subcategories`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered subcategories/show.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 37ms (Views: 29.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/subcategories" for 127.0.0.1 at 2011-09-08 18:18:21 +0530
+  Processing by SubcategoriesController#index as HTML
+  [1m[35mSubcategory Load (0.3ms)[0m  SELECT `subcategories`.* FROM `subcategories`
+Rendered subcategories/index.html.erb within layouts/application (12.1ms)
+Completed 500 Internal Server Error in 22ms
+
+ActionView::Template::Error (uninitialized constant Subcategory::Categorie):
+    14:   <tr>
+    15:     <td><%= subcategory.name %></td>
+    16:     <td><%= subcategory.description %></td>
+    17:     <td><%= subcategory.categorie %></td>
+    18:     <td><%= link_to 'Show', subcategory %></td>
+    19:     <td><%= link_to 'Edit', edit_subcategory_path(subcategory) %></td>
+    20:     <td><%= link_to 'Destroy', subcategory, :confirm => 'Are you sure?', :method => :delete %></td>
+  app/views/subcategories/index.html.erb:17:in `block in _app_views_subcategories_index_html_erb__575804_89896160__62816423'
+  app/views/subcategories/index.html.erb:13:in `each'
+  app/views/subcategories/index.html.erb:13:in `_app_views_subcategories_index_html_erb__575804_89896160__62816423'
+  app/controllers/subcategories_controller.rb:7:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (72.6ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (99.5ms)
+
+
+Started GET "/subcategories" for 127.0.0.1 at 2011-09-08 18:18:31 +0530
+  Processing by SubcategoriesController#index as HTML
+  [1m[36mSubcategory Load (0.1ms)[0m  [1mSELECT `subcategories`.* FROM `subcategories`[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered subcategories/index.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 38ms (Views: 30.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subcategories/new" for 127.0.0.1 at 2011-09-08 18:18:39 +0530
+  Processing by SubcategoriesController#new as HTML
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered subcategories/_form.html.erb (53.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered subcategories/new.html.erb within layouts/application (75.8ms)
+Completed 200 OK in 86ms (Views: 79.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-09-08 18:18:45 +0530
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (5.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered categories/new.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 39ms (Views: 31.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-09-08 18:18:49 +0530
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "category"=>{"name"=>"category2", "description"=>""}, "commit"=>"Create Category"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mdescribe `categories`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `categories` (`name`, `description`, `created_at`, `updated_at`) VALUES ('category2', '', '2011-09-08 12:48:49', '2011-09-08 12:48:49')
+  [1m[36mSQL (32.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/categories/2
+Completed 302 Found in 47ms
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2011-09-08 18:18:49 +0530
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 36ms (Views: 28.7ms | ActiveRecord: 33.3ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-09-08 18:18:50 +0530
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered categories/index.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 37ms (Views: 30.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subcategories" for 127.0.0.1 at 2011-09-08 18:18:54 +0530
+  Processing by SubcategoriesController#index as HTML
+  [1m[35mSubcategory Load (0.1ms)[0m  SELECT `subcategories`.* FROM `subcategories`
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered subcategories/index.html.erb within layouts/application (56.7ms)
+Completed 200 OK in 66ms (Views: 59.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/subcategories/new" for 127.0.0.1 at 2011-09-08 18:18:55 +0530
+  Processing by SubcategoriesController#new as HTML
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered subcategories/_form.html.erb (20.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered subcategories/new.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 52ms (Views: 45.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/subcategories" for 127.0.0.1 at 2011-09-08 18:19:03 +0530
+  Processing by SubcategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "subcategory"=>{"categorie_id"=>"2", "name"=>"subcategory1", "description"=>""}, "commit"=>"Create Subcategory"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mdescribe `subcategories`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `subcategories` (`name`, `description`, `categorie_id`, `created_at`, `updated_at`) VALUES ('subcategory1', '', 2, '2011-09-08 12:49:03', '2011-09-08 12:49:03')
+  [1m[36mSQL (31.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/subcategories/2
+Completed 302 Found in 46ms
+
+
+Started GET "/subcategories/2" for 127.0.0.1 at 2011-09-08 18:19:03 +0530
+  Processing by SubcategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSubcategory Load (0.2ms)[0m  SELECT `subcategories`.* FROM `subcategories` WHERE `subcategories`.`id` = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered subcategories/show.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 37ms (Views: 29.7ms | ActiveRecord: 32.2ms)
+
+
+Started GET "/subcategories" for 127.0.0.1 at 2011-09-08 18:19:05 +0530
+  Processing by SubcategoriesController#index as HTML
+  [1m[35mSubcategory Load (0.2ms)[0m  SELECT `subcategories`.* FROM `subcategories`
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered subcategories/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 40ms (Views: 32.3ms | ActiveRecord: 0.3ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (109.8ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (184.3ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20110907135730)
+  [1m[35mSQL (137.4ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `password_salt` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `remember_token` varchar(255), `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `role` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `users`[0m
+  [1m[35mSQL (233.9ms)[0m  CREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW KEYS FROM `users`[0m
+  [1m[35mSQL (235.0ms)[0m  CREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)
+  [1m[36mSQL (37.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110907135730')[0m
+Migrating to CreateProducts (20110908073616)
+  [1m[35mSQL (131.8ms)[0m  CREATE TABLE `products` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `productname` varchar(255), `price` int(11), `weight` int(11), `category_id` varchar(255), `subcategory_id` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (40.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110908073616')[0m
+Migrating to CreateCategories (20110908123731)
+  [1m[35mSQL (123.5ms)[0m  CREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (32.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110908123731')[0m
+Migrating to CreateSubcategories (20110908123953)
+  [1m[35mSQL (144.3ms)[0m  CREATE TABLE `subcategories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `categorie_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (32.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110908123953')[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mdescribe `categories`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `categories`
+  [1m[36mSQL (0.4ms)[0m  [1mdescribe `products`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `products`
+  [1m[36mSQL (0.3ms)[0m  [1mdescribe `subcategories`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `subcategories`
+  [1m[36mSQL (0.6ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `users`
+
+
+Started GET "/subcategories" for 127.0.0.1 at 2011-09-08 18:30:36 +0530
+  Processing by SubcategoriesController#index as HTML
+  [1m[35mSubcategory Load (0.2ms)[0m  SELECT `subcategories`.* FROM `subcategories`
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered subcategories/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 49ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-09-08 18:30:42 +0530
+  Processing by ProductsController#index as HTML
+Completed   in 7ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-08 18:30:42 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.2ms)
+Rendered devise/sessions/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 57ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-09-08 18:30:55 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "user"=>{"email"=>"mallikarjunrao@indigenius.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'mallikarjunrao@indigenius.com' LIMIT 1
+Completed   in 9ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "user"=>{"email"=>"mallikarjunrao@indigenius.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Rendered devise/shared/_links.erb (1.1ms)
+Rendered devise/sessions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 110ms (Views: 9.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-09-08 18:31:04 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "user"=>{"email"=>"mallikarjun.duddi@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'mallikarjun.duddi@gmail.com' LIMIT 1[0m
+Completed   in 9ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "user"=>{"email"=>"mallikarjun.duddi@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Rendered devise/shared/_links.erb (1.1ms)
+Rendered devise/sessions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 94ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-09-08 18:31:08 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (1.2ms)
+Rendered devise/registrations/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 27ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-09-08 18:31:19 +0530
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "user"=>{"email"=>"mallikarjun.duddi@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"admin"}, "commit"=>"Sign up"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('mallikarjun.duddi@gmail.com')) LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`confirmation_token` = 'Ha0tFdWlVT-3DOl2_pYN' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `users` (`email`, `encrypted_password`, `password_salt`, `reset_password_token`, `remember_token`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `role`, `created_at`, `updated_at`) VALUES ('mallikarjun.duddi@gmail.com', '$2a$10$inXz0FFfExZ7dFcwuu4ljuHRBqy0HbRUMye3kU/8k3MHSZChJDtR2', '$2a$10$inXz0FFfExZ7dFcwuu4lju', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 'Ha0tFdWlVT-3DOl2_pYN', NULL, '2011-09-08 13:01:19', 'admin', '2011-09-08 13:01:19', '2011-09-08 13:01:19')
+Rendered devise/mailer/confirmation_instructions.html.erb (0.8ms)
+
+Sent mail to mallikarjun.duddi@gmail.com (9399ms)
+Date: Thu, 08 Sep 2011 18:31:19 +0530
+From: mallikarjunrao@indigenius.com
+To: mallikarjun.duddi@gmail.com
+Message-ID: <4e68bc9fcdc12_190558c3f0c3095f@malli.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome mallikarjun.duddi@gmail.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=Ha0tFdWlVT-3DOl2_pYN">Confirm my account</a></p>
+  [1m[36mSQL (43.3ms)[0m  [1mCOMMIT[0m
+Completed   in 9674ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-08 18:31:29 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.2ms)
+Rendered devise/sessions/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 29ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/confirmation?confirmation_token=Ha0tFdWlVT-3DOl2_pYN" for 127.0.0.1 at 2011-09-08 18:31:40 +0530
+  Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"Ha0tFdWlVT-3DOl2_pYN"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`confirmation_token` = 'Ha0tFdWlVT-3DOl2_pYN' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE `users` SET `confirmation_token` = NULL, `confirmed_at` = '2011-09-08 13:01:40', `updated_at` = '2011-09-08 13:01:40' WHERE `users`.`id` = 1
+  [1m[36mSQL (34.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.2ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2011-09-08 13:01:40', `current_sign_in_at` = '2011-09-08 13:01:40', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2011-09-08 13:01:40' WHERE `users`.`id` = 1[0m
+  [1m[35mSQL (39.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 129ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-08 18:31:40 +0530
+  Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+Rendered products/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 31ms (Views: 5.7ms | ActiveRecord: 75.1ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 18:31:42 +0530
+  Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered products/_form.html.erb (19.0ms)
+Rendered products/new.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 83ms (Views: 24.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-09-08 18:32:04 +0530
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered categories/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 32ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-09-08 18:32:05 +0530
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (38.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered categories/new.html.erb within layouts/application (61.9ms)
+Completed 200 OK in 72ms (Views: 65.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-09-08 18:32:14 +0530
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"snwLFRgyExxgspfaYXXtFsJnJ+7YTG5u0VL5ImAgH4k=", "category"=>{"name"=>"category1", "description"=>""}, "commit"=>"Create Category"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mdescribe `categories`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `categories` (`name`, `description`, `created_at`, `updated_at`) VALUES ('category1', '', '2011-09-08 13:02:14', '2011-09-08 13:02:14')
+  [1m[36mSQL (71.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/categories/1
+Completed 302 Found in 85ms
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2011-09-08 18:32:14 +0530
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 36ms (Views: 28.8ms | ActiveRecord: 72.2ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-09-08 18:32:15 +0530
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered categories/index.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 38ms (Views: 31.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subcategories" for 127.0.0.1 at 2011-09-08 18:32:21 +0530
+  Processing by SubcategoriesController#index as HTML
+  [1m[35mSubcategory Load (0.1ms)[0m  SELECT `subcategories`.* FROM `subcategories`
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered subcategories/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 33ms (Views: 25.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/subcategories/new" for 127.0.0.1 at 2011-09-08 18:32:22 +0530
+  Processing by SubcategoriesController#new as HTML
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered subcategories/_form.html.erb (21.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered subcategories/new.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 90ms (Views: 47.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/subcategories" for 127.0.0.1 at 2011-09-08 18:32:30 +0530
+  Processing by SubcategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"snwLFRgyExxgspfaYXXtFsJnJ+7YTG5u0VL5ImAgH4k=", "subcategory"=>{"categorie_id"=>"1", "name"=>"subcategory", "description"=>""}, "commit"=>"Create Subcategory"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mdescribe `subcategories`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `subcategories` (`name`, `description`, `categorie_id`, `created_at`, `updated_at`) VALUES ('subcategory', '', 1, '2011-09-08 13:02:30', '2011-09-08 13:02:30')
+  [1m[36mSQL (68.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/subcategories/1
+Completed 302 Found in 83ms
+
+
+Started GET "/subcategories/1" for 127.0.0.1 at 2011-09-08 18:32:30 +0530
+  Processing by SubcategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSubcategory Load (0.2ms)[0m  SELECT `subcategories`.* FROM `subcategories` WHERE `subcategories`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered subcategories/show.html.erb within layouts/application (60.3ms)
+Completed 200 OK in 72ms (Views: 63.7ms | ActiveRecord: 69.0ms)
+
+
+Started GET "/subcategories" for 127.0.0.1 at 2011-09-08 18:32:32 +0530
+  Processing by SubcategoriesController#index as HTML
+  [1m[35mSubcategory Load (0.3ms)[0m  SELECT `subcategories`.* FROM `subcategories`
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered subcategories/index.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 38ms (Views: 30.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-09-08 18:32:37 +0530
+  Processing by ProductsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+Rendered products/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 67ms (Views: 5.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 18:32:39 +0530
+  Processing by ProductsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered products/_form.html.erb (22.1ms)
+Rendered products/new.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 54ms (Views: 28.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2011-09-08 18:35:15 +0530
+  Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"snwLFRgyExxgspfaYXXtFsJnJ+7YTG5u0VL5ImAgH4k=", "product"=>{"category_id"=>"1", "subcategory_id"=>"", "productname"=>"d", "price"=>"dd", "weight"=>""}, "commit"=>"Create Product"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  describe `products`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `products` (`productname`, `price`, `weight`, `category_id`, `subcategory_id`, `created_at`, `updated_at`) VALUES ('d', 0, NULL, '1', '', '2011-09-08 13:05:15', '2011-09-08 13:05:15')[0m
+  [1m[35mSQL (47.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 117ms
+
+
+Started GET "/products/1" for 127.0.0.1 at 2011-09-08 18:35:15 +0530
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+Rendered products/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 37ms (Views: 10.6ms | ActiveRecord: 48.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-09-08 18:35:16 +0530
+  Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+Rendered products/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 71ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-08 18:41:06 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.1ms)
+Rendered devise/sessions/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 27ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-08 18:41:10 +0530
+  Processing by ProductsController#index as HTML
+Completed   in 40ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-08 18:41:10 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.1ms)
+Rendered devise/sessions/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 28ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-09-08 18:41:15 +0530
+  Processing by ProductsController#index as HTML
+Completed   in 7ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-08 18:41:15 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.2ms)
+Rendered devise/sessions/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 29ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-09-08 18:41:31 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "user"=>{"email"=>"mallikarjun.duddi@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'mallikarjun.duddi@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.2ms)[0m  [1mUPDATE `users` SET `current_sign_in_at` = '2011-09-08 13:11:31', `sign_in_count` = 2, `updated_at` = '2011-09-08 13:11:31' WHERE `users`.`id` = 1[0m
+  [1m[35mSQL (45.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/products
+Completed 302 Found in 142ms
+
+
+Started GET "/products" for 127.0.0.1 at 2011-09-08 18:41:31 +0530
+  Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT `products`.* FROM `products`
+Rendered products/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 36ms (Views: 11.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 18:41:35 +0530
+  Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered products/_form.html.erb (55.4ms)
+Rendered products/new.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 88ms (Views: 61.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 18:47:13 +0530
+  Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered products/_form.html.erb (21.7ms)
+Rendered products/new.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 53ms (Views: 27.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 18:55:11 +0530
+  Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered products/_form.html.erb (21.4ms)
+Rendered products/new.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 54ms (Views: 27.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-09-08 18:55:18 +0530
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `paginate' for #<Class:0xb159fcc>):
+  app/controllers/categories_controller.rb:6:in `index'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (80.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (84.7ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-09-08 18:55:41 +0530
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories` LIMIT 2 OFFSET 0
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered categories/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 61ms (Views: 28.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-09-08 18:55:43 +0530
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (5.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered categories/new.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 38ms (Views: 30.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-09-08 18:55:46 +0530
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "category"=>{"name"=>"category2", "description"=>""}, "commit"=>"Create Category"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mdescribe `categories`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `categories` (`name`, `description`, `created_at`, `updated_at`) VALUES ('category2', '', '2011-09-08 13:25:46', '2011-09-08 13:25:46')
+  [1m[36mSQL (41.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/categories/2
+Completed 302 Found in 94ms
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2011-09-08 18:55:46 +0530
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 37ms (Views: 29.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-09-08 18:55:47 +0530
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` LIMIT 2 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM `categories`
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered categories/index.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 38ms (Views: 29.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-09-08 18:55:48 +0530
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (5.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered categories/new.html.erb within layouts/application (54.3ms)
+Completed 200 OK in 65ms (Views: 57.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-09-08 18:55:51 +0530
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "category"=>{"name"=>"dd", "description"=>""}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  describe `categories`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `categories` (`name`, `description`, `created_at`, `updated_at`) VALUES ('dd', '', '2011-09-08 13:25:51', '2011-09-08 13:25:51')[0m
+  [1m[35mSQL (43.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories/3
+Completed 302 Found in 57ms
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2011-09-08 18:55:51 +0530
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered categories/show.html.erb within layouts/application (52.5ms)
+Completed 200 OK in 63ms (Views: 55.6ms | ActiveRecord: 42.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-09-08 18:55:52 +0530
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` LIMIT 2 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM `categories`[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered categories/index.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 37ms (Views: 29.2ms | ActiveRecord: 44.7ms)
+
+
+Started GET "/categories?page=2" for 127.0.0.1 at 2011-09-08 18:55:53 +0530
+  Processing by CategoriesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories` LIMIT 2 OFFSET 2
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered categories/index.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 37ms (Views: 30.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories?page=1" for 127.0.0.1 at 2011-09-08 18:55:56 +0530
+  Processing by CategoriesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories`
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` LIMIT 2 OFFSET 0[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM `categories`
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered categories/index.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 70ms (Views: 61.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/categories?page=1" for 127.0.0.1 at 2011-09-08 19:00:34 +0530
+  Processing by CategoriesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories`
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` LIMIT 2 OFFSET 0[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM `categories`
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered categories/index.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 37ms (Views: 29.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-09-08 19:00:41 +0530
+  Processing by ProductsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+Rendered products/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 40ms (Views: 11.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 19:00:42 +0530
+  Processing by ProductsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered products/_form.html.erb (21.6ms)
+Rendered products/new.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 53ms (Views: 27.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 19:06:37 +0530
+  Processing by ProductsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered products/_form.html.erb (22.1ms)
+Rendered products/new.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 83ms (Views: 28.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 19:06:39 +0530
+  Processing by ProductsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered products/_form.html.erb (22.3ms)
+Rendered products/new.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 85ms (Views: 28.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 19:09:07 +0530
+  Processing by ProductsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered products/_form.html.erb (23.0ms)
+Rendered products/new.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 83ms (Views: 29.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/javascripts/prototype.js" for 127.0.0.1 at 2011-09-08 19:09:07 +0530
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/effects.js" for 127.0.0.1 at 2011-09-08 19:09:07 +0530
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/controls.js" for 127.0.0.1 at 2011-09-08 19:09:07 +0530
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/dragdrop.js" for 127.0.0.1 at 2011-09-08 19:09:07 +0530
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/dragdrop.js" for 127.0.0.1 at 2011-09-08 19:09:07 +0530
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/controls.js" for 127.0.0.1 at 2011-09-08 19:09:07 +0530
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 19:09:32 +0530
+  Processing by ProductsController#new as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered products/_form.html.erb (48.8ms)
+Rendered products/new.html.erb within layouts/application (51.8ms)
+Completed 200 OK in 85ms (Views: 55.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/javascripts/effects.js" for 127.0.0.1 at 2011-09-08 19:09:32 +0530
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/prototype.js" for 127.0.0.1 at 2011-09-08 19:09:32 +0530
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/dragdrop.js" for 127.0.0.1 at 2011-09-08 19:09:32 +0530
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/controls.js" for 127.0.0.1 at 2011-09-08 19:09:32 +0530
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/effects.js" for 127.0.0.1 at 2011-09-08 19:09:32 +0530
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/dragdrop.js" for 127.0.0.1 at 2011-09-08 19:09:32 +0530
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/controls.js" for 127.0.0.1 at 2011-09-08 19:09:32 +0530
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 19:09:41 +0530
+  Processing by ProductsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered products/_form.html.erb (22.0ms)
+Rendered products/new.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 79ms (Views: 28.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/javascripts/effects.js" for 127.0.0.1 at 2011-09-08 19:09:41 +0530
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/prototype.js" for 127.0.0.1 at 2011-09-08 19:09:41 +0530
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/controls.js" for 127.0.0.1 at 2011-09-08 19:09:41 +0530
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/dragdrop.js" for 127.0.0.1 at 2011-09-08 19:09:41 +0530
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/effects.js" for 127.0.0.1 at 2011-09-08 19:09:41 +0530
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/dragdrop.js" for 127.0.0.1 at 2011-09-08 19:09:41 +0530
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/controls.js" for 127.0.0.1 at 2011-09-08 19:09:41 +0530
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 19:10:38 +0530
+  Processing by ProductsController#new as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered products/_form.html.erb (49.7ms)
+Rendered products/new.html.erb within layouts/application (52.6ms)
+Completed 200 OK in 85ms (Views: 55.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/subcategories/load_subcategories?id=1" for 127.0.0.1 at 2011-09-08 19:10:49 +0530
+  Processing by SubcategoriesController#show as 
+  Parameters: {"id"=>"load_subcategories"}
+  [1m[35mSubcategory Load (0.2ms)[0m  SELECT `subcategories`.* FROM `subcategories` WHERE `subcategories`.`id` = 0 LIMIT 1
+Completed 404 Not Found in 8ms
+
+ActiveRecord::RecordNotFound (Couldn't find Subcategory with ID=load_subcategories):
+  app/controllers/subcategories_controller.rb:24:in `show'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (92.1ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (96.7ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 19:12:02 +0530
+  Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered products/_form.html.erb (22.5ms)
+Rendered products/new.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 75ms (Views: 56.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/subcategories/load_subcategories?id=2" for 127.0.0.1 at 2011-09-08 19:12:04 +0530
+  Processing by SubcategoriesController#load_subcategories as 
+  Parameters: {"id"=>"2"}
+  [1m[36mSubcategory Load (0.3ms)[0m  [1mSELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 2[0m
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 2
+Rendered subcategories/load_subcategories.js.erb (1.2ms)
+Completed 500 Internal Server Error in 32ms
+
+ActionView::Template::Error (Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 2):
+    1:  $("#subcategories").html("<%= escape_javascript(collection_select :product,:subcategory_id,@subcategories,:id,:name,:prompt=>"Select a Subcategory", :class => 'droplist')%>");
+  app/views/subcategories/load_subcategories.js.erb:1:in `_app_views_subcategories_load_subcategories_js_erb__670967717_95103210_413356068'
+  app/controllers/subcategories_controller.rb:16:in `load_subcategories'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  [1m[35mSubcategory Load (0.2ms)[0m  SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 2
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 2
+  [1m[36mSubcategory Load (0.1ms)[0m  [1mSELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 2[0m
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 2
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (55.1ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (58.9ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 19:13:56 +0530
+  Processing by ProductsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered products/_form.html.erb (22.1ms)
+Rendered products/new.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 80ms (Views: 28.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subcategories/load_subcategories?id=1" for 127.0.0.1 at 2011-09-08 19:13:58 +0530
+  Processing by SubcategoriesController#load_subcategories as 
+  Parameters: {"id"=>"1"}
+  [1m[35mSubcategory Load (0.2ms)[0m  SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Rendered subcategories/load_subcategories.js.erb (5.2ms)
+Completed 200 OK in 19ms (Views: 10.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subcategories/load_subcategories?id=2" for 127.0.0.1 at 2011-09-08 19:14:02 +0530
+  Processing by SubcategoriesController#load_subcategories as 
+  Parameters: {"id"=>"2"}
+  [1m[36mSubcategory Load (0.2ms)[0m  [1mSELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 2[0m
+Rendered subcategories/load_subcategories.js.erb (1.2ms)
+Completed 200 OK in 43ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subcategories/load_subcategories?id=1" for 127.0.0.1 at 2011-09-08 19:14:04 +0530
+  Processing by SubcategoriesController#load_subcategories as 
+  Parameters: {"id"=>"1"}
+  [1m[35mSubcategory Load (0.1ms)[0m  SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Rendered subcategories/load_subcategories.js.erb (4.8ms)
+Completed 200 OK in 18ms (Views: 10.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 19:15:21 +0530
+  Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered products/_form.html.erb (22.0ms)
+Rendered products/new.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 56ms (Views: 28.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subcategories/load_subcategories?id=1" for 127.0.0.1 at 2011-09-08 19:15:23 +0530
+  Processing by SubcategoriesController#load_subcategories as 
+  Parameters: {"id"=>"1"}
+  [1m[36mSubcategory Load (0.1ms)[0m  [1mSELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1[0m
+Rendered subcategories/load_subcategories.js.erb (5.1ms)
+Completed 200 OK in 19ms (Views: 10.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 19:16:38 +0530
+  Processing by ProductsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered products/_form.html.erb (22.1ms)
+Rendered products/new.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 54ms (Views: 27.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-08 19:16:42 +0530
+  Processing by ProductsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+Rendered products/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 37ms (Views: 11.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-09-08 19:16:48 +0530
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories`
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` LIMIT 2 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM `categories`
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered categories/index.html.erb within layouts/application (57.5ms)
+Completed 200 OK in 69ms (Views: 60.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories?page=2" for 127.0.0.1 at 2011-09-08 19:16:49 +0530
+  Processing by CategoriesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories`
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` LIMIT 2 OFFSET 2[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered categories/index.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 37ms (Views: 29.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories?page=1" for 127.0.0.1 at 2011-09-08 19:16:51 +0530
+  Processing by CategoriesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` LIMIT 2 OFFSET 0
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM `categories`[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered categories/index.html.erb within layouts/application (58.3ms)
+Completed 200 OK in 70ms (Views: 61.5ms | ActiveRecord: 0.2ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (106.1ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (184.1ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20110907135730)
+  [1m[35mSQL (119.0ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `password_salt` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `remember_token` varchar(255), `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `role` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `users`[0m
+  [1m[35mSQL (201.8ms)[0m  CREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW KEYS FROM `users`[0m
+  [1m[35mSQL (208.6ms)[0m  CREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)
+  [1m[36mSQL (30.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110907135730')[0m
+Migrating to CreateProducts (20110908073616)
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE `products` ADD `file_file_name` varchar(255)
+Mysql2::Error: Table 'devise_development.products' doesn't exist: ALTER TABLE `products` ADD `file_file_name` varchar(255)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20110907135730)
+Migrating to CreateProducts (20110908073616)
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE `products` ADD `file_file_name` varchar(255)
+Mysql2::Error: Table 'devise_development.products' doesn't exist: ALTER TABLE `products` ADD `file_file_name` varchar(255)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20110907135730)
+Migrating to CreateProducts (20110908073616)
+  [1m[35mSQL (112.6ms)[0m  CREATE TABLE `products` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `productname` varchar(255), `price` int(11), `weight` int(11), `category_id` varchar(255), `subcategory_id` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (46.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110908073616')[0m
+Migrating to CreateCategories (20110908123731)
+  [1m[35mSQL (131.8ms)[0m  CREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (49.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110908123731')[0m
+Migrating to CreateSubcategories (20110908123953)
+  [1m[35mSQL (133.1ms)[0m  CREATE TABLE `subcategories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `categorie_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (49.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110908123953')[0m
+Migrating to AddToPhotos (20110908135845)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20110907135730)
+Migrating to CreateProducts (20110908073616)
+Migrating to CreateCategories (20110908123731)
+Migrating to CreateSubcategories (20110908123953)
+Migrating to AddToPhotos (20110908135845)
+  [1m[35mSQL (222.5ms)[0m  ALTER TABLE `products` ADD `file_file_name` varchar(255)
+  [1m[36mSQL (192.7ms)[0m  [1mALTER TABLE `products` ADD `file_content_type` varchar(255)[0m
+  [1m[35mSQL (184.4ms)[0m  ALTER TABLE `products` ADD `file_file_size` int(11)
+  [1m[36mSQL (184.4ms)[0m  [1mALTER TABLE `products` ADD `file_updated_at` datetime[0m
+  [1m[35mSQL (209.4ms)[0m  ALTER TABLE `products` ADD `avatar_file_name` varchar(255)
+  [1m[36mSQL (209.4ms)[0m  [1mALTER TABLE `products` ADD `avatar_content_type` varchar(255)[0m
+  [1m[35mSQL (202.4ms)[0m  ALTER TABLE `products` ADD `avatar_file_size` int(11)
+  [1m[36mSQL (192.8ms)[0m  [1mALTER TABLE `products` ADD `avatar_updated_at` datetime[0m
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20110907135730)
+Migrating to CreateProducts (20110908073616)
+Migrating to CreateCategories (20110908123731)
+Migrating to CreateSubcategories (20110908123953)
+Migrating to AddToPhotos (20110908135845)
+  [1m[35mSQL (0.3ms)[0m  ALTER TABLE `products` ADD `file_file_name` varchar(255)
+Mysql2::Error: Duplicate column name 'file_file_name': ALTER TABLE `products` ADD `file_file_name` varchar(255)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+
+
+Started GET "/categories?page=1" for 127.0.0.1 at 2011-09-08 19:34:50 +0530
+  Processing by CategoriesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` LIMIT 2 OFFSET 0
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered categories/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 28ms (Views: 13.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 19:34:55 +0530
+  Processing by ProductsController#new as HTML
+Completed   in 7ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-08 19:34:55 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.1ms)
+Rendered devise/sessions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 28ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-09-08 19:35:03 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (1.3ms)
+Rendered devise/registrations/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 28ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-09-08 19:35:21 +0530
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "user"=>{"email"=>"mallikarjunrao@indigenius.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"admin"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('mallikarjunrao@indigenius.com')) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`confirmation_token` = 'IIZD99rw2Kf-O359FCt6' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  describe `users`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `users` (`email`, `encrypted_password`, `password_salt`, `reset_password_token`, `remember_token`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `role`, `created_at`, `updated_at`) VALUES ('mallikarjunrao@indigenius.com', '$2a$10$oNk97iF5TOVGXnKUBAKYCelCopYtisVaIBcC.3ozsOdw/Y4gTHT3G', '$2a$10$oNk97iF5TOVGXnKUBAKYCe', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 'IIZD99rw2Kf-O359FCt6', NULL, '2011-09-08 14:05:21', 'admin', '2011-09-08 14:05:21', '2011-09-08 14:05:21')[0m
+Rendered devise/mailer/confirmation_instructions.html.erb (0.7ms)
+
+Sent mail to mallikarjunrao@indigenius.com (11056ms)
+Date: Thu, 08 Sep 2011 19:35:21 +0530
+From: mallikarjunrao@indigenius.com
+To: mallikarjunrao@indigenius.com
+Message-ID: <4e68cba164ca2_1c2a493d862807e9@malli.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome mallikarjunrao@indigenius.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=IIZD99rw2Kf-O359FCt6">Confirm my account</a></p>
+  [1m[35mSQL (60.1ms)[0m  COMMIT
+Completed   in 11407ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-08 19:35:32 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.2ms)
+Rendered devise/sessions/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 27ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/confirmation?confirmation_token=IIZD99rw2Kf-O359FCt6" for 127.0.0.1 at 2011-09-08 19:35:39 +0530
+  Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"IIZD99rw2Kf-O359FCt6"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`confirmation_token` = 'IIZD99rw2Kf-O359FCt6' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE `users` SET `confirmation_token` = NULL, `confirmed_at` = '2011-09-08 14:05:39', `updated_at` = '2011-09-08 14:05:39' WHERE `users`.`id` = 1[0m
+  [1m[35mSQL (68.9ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2011-09-08 14:05:39', `current_sign_in_at` = '2011-09-08 14:05:39', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2011-09-08 14:05:39' WHERE `users`.`id` = 1
+  [1m[36mSQL (56.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/products/new
+Completed 302 Found in 151ms
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 19:35:39 +0530
+  Processing by ProductsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered products/_form.html.erb (25.5ms)
+Rendered products/new.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 62ms (Views: 31.5ms | ActiveRecord: 61.7ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-09-08 19:35:49 +0530
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories`
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` LIMIT 2 OFFSET 0[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered categories/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 34ms (Views: 24.9ms | ActiveRecord: 126.5ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2011-09-08 19:35:52 +0530
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (5.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered categories/new.html.erb within layouts/application (57.9ms)
+Completed 200 OK in 70ms (Views: 61.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2011-09-08 19:35:54 +0530
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "category"=>{"name"=>"category1", "description"=>""}, "commit"=>"Create Category"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mdescribe `categories`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `categories` (`name`, `description`, `created_at`, `updated_at`) VALUES ('category1', '', '2011-09-08 14:05:54', '2011-09-08 14:05:54')
+[paperclip] Saving attachments.
+  [1m[36mSQL (62.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/categories/1
+Completed 302 Found in 79ms
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2011-09-08 19:35:54 +0530
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (61.5ms)
+Completed 200 OK in 74ms (Views: 64.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2011-09-08 19:35:55 +0530
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` LIMIT 2 OFFSET 0[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered categories/index.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 40ms (Views: 30.5ms | ActiveRecord: 63.7ms)
+
+
+Started GET "/subcategories" for 127.0.0.1 at 2011-09-08 19:35:59 +0530
+  Processing by SubcategoriesController#index as HTML
+  [1m[36mSubcategory Load (0.3ms)[0m  [1mSELECT `subcategories`.* FROM `subcategories`[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered subcategories/index.html.erb within layouts/application (52.7ms)
+Completed 200 OK in 64ms (Views: 55.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/subcategories/new" for 127.0.0.1 at 2011-09-08 19:36:00 +0530
+  Processing by SubcategoriesController#new as HTML
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered subcategories/_form.html.erb (22.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered subcategories/new.html.erb within layouts/application (76.4ms)
+Completed 200 OK in 88ms (Views: 79.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/subcategories" for 127.0.0.1 at 2011-09-08 19:36:04 +0530
+  Processing by SubcategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "subcategory"=>{"categorie_id"=>"1", "name"=>"subcategory1", "description"=>""}, "commit"=>"Create Subcategory"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  describe `subcategories`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `subcategories` (`name`, `description`, `categorie_id`, `created_at`, `updated_at`) VALUES ('subcategory1', '', 1, '2011-09-08 14:06:04', '2011-09-08 14:06:04')[0m
+  [1m[35mSQL (58.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/subcategories/1
+Completed 302 Found in 75ms
+
+
+Started GET "/subcategories/1" for 127.0.0.1 at 2011-09-08 19:36:04 +0530
+  Processing by SubcategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubcategory Load (0.2ms)[0m  [1mSELECT `subcategories`.* FROM `subcategories` WHERE `subcategories`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered subcategories/show.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 40ms (Views: 31.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subcategories" for 127.0.0.1 at 2011-09-08 19:36:05 +0530
+  Processing by SubcategoriesController#index as HTML
+  [1m[36mSubcategory Load (0.2ms)[0m  [1mSELECT `subcategories`.* FROM `subcategories`[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered subcategories/index.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 38ms (Views: 30.5ms | ActiveRecord: 59.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-08 19:36:08 +0530
+  Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products`
+Rendered products/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 62ms (Views: 6.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 19:36:09 +0530
+  Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered products/_form.html.erb (29.0ms)
+Rendered products/new.html.erb within layouts/application (31.6ms)
+Completed 200 OK in 61ms (Views: 34.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/subcategories/load_subcategories?id=1" for 127.0.0.1 at 2011-09-08 19:36:11 +0530
+  Processing by SubcategoriesController#load_subcategories as 
+  Parameters: {"id"=>"1"}
+  [1m[36mSubcategory Load (0.3ms)[0m  [1mSELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1[0m
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Rendered subcategories/load_subcategories.js.erb (1.3ms)
+Completed 500 Internal Server Error in 34ms
+
+ActionView::Template::Error (Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1):
+    1:  $("#subcategories").html("<%= escape_javascript(collection_select :product,:subcategory_id,@subcategories,:id,:name,:prompt=>"Select a Subcategory", :class => 'droplist')%>");
+  app/views/subcategories/load_subcategories.js.erb:1:in `_app_views_subcategories_load_subcategories_js_erb__58521871_88056460_522875142'
+  app/controllers/subcategories_controller.rb:16:in `load_subcategories'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  [1m[35mSubcategory Load (0.2ms)[0m  SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+  [1m[36mSubcategory Load (0.1ms)[0m  [1mSELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1[0m
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (52.1ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (55.8ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2011-09-08 19:36:32 +0530
+  Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "product"=>{"category_id"=>"1", "subcategory_id"=>"", "productname"=>"product", "price"=>"", "weight"=>"", "avatar"=>"rails.png", "file"=>"sample.pdf"}, "commit"=>"Create Product"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 500 Internal Server Error in 61ms
+
+ActiveRecord::UnknownAttributeError (unknown attribute: avatar):
+  app/controllers/products_controller.rb:44:in `new'
+  app/controllers/products_controller.rb:44:in `create'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (105.7ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (110.0ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+
+
+Started POST "/products" for 127.0.0.1 at 2011-09-08 19:38:18 +0530
+  Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "product"=>{"category_id"=>"1", "subcategory_id"=>"", "productname"=>"product", "price"=>"", "weight"=>"", "avatar"=>"rails.png", "file"=>"sample.pdf"}, "commit"=>"Create Product"}
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  describe `products`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `products` (`productname`, `price`, `weight`, `category_id`, `subcategory_id`, `created_at`, `updated_at`, `file_file_name`, `file_content_type`, `file_file_size`, `file_updated_at`, `avatar_file_name`, `avatar_content_type`, `avatar_file_size`, `avatar_updated_at`) VALUES ('product', NULL, NULL, '1', '', '2011-09-08 14:08:19', '2011-09-08 14:08:19', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (62.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 143ms
+
+
+Started GET "/products/1" for 127.0.0.1 at 2011-09-08 19:38:19 +0530
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+Rendered products/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 44ms (Views: 14.7ms | ActiveRecord: 63.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-09-08 19:38:20 +0530
+  Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+Rendered products/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 43ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 19:38:44 +0530
+  Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered products/_form.html.erb (33.6ms)
+Rendered products/new.html.erb within layouts/application (36.3ms)
+Completed 200 OK in 98ms (Views: 39.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2011-09-08 19:39:29 +0530
+  Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "product"=>{"category_id"=>"", "subcategory_id"=>"", "productname"=>"ddddd", "price"=>"", "weight"=>"", "avatar"=>"rails.png", "file"=>"sample.pdf"}, "commit"=>"Create Product"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `products`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `products` (`productname`, `price`, `weight`, `category_id`, `subcategory_id`, `created_at`, `updated_at`, `file_file_name`, `file_content_type`, `file_file_size`, `file_updated_at`, `avatar_file_name`, `avatar_content_type`, `avatar_file_size`, `avatar_updated_at`) VALUES ('ddddd', NULL, NULL, '', '', '2011-09-08 14:09:29', '2011-09-08 14:09:29', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+[paperclip] Saving attachments.
+  [1m[36mSQL (62.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/products/2
+Completed 302 Found in 133ms
+
+
+Started GET "/products/2" for 127.0.0.1 at 2011-09-08 19:39:29 +0530
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+Rendered products/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 45ms (Views: 15.6ms | ActiveRecord: 63.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-09-08 19:39:32 +0530
+  Processing by ProductsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+Rendered products/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 42ms (Views: 16.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 19:48:00 +0530
+  Processing by ProductsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered products/_form.html.erb (29.0ms)
+Rendered products/new.html.erb within layouts/application (31.6ms)
+Completed 200 OK in 92ms (Views: 34.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-09-08 19:48:29 +0530
+  Processing by ProductsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+Rendered products/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 72ms (Views: 16.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 19:48:39 +0530
+  Processing by ProductsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered products/_form.html.erb (59.8ms)
+Rendered products/new.html.erb within layouts/application (62.4ms)
+Completed 200 OK in 93ms (Views: 65.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subcategories/load_subcategories?id=1" for 127.0.0.1 at 2011-09-08 19:53:05 +0530
+  Processing by SubcategoriesController#load_subcategories as 
+  Parameters: {"id"=>"1"}
+  [1m[35mSubcategory Load (0.3ms)[0m  SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Rendered subcategories/load_subcategories.js.erb (1.2ms)
+Completed 500 Internal Server Error in 31ms
+
+ActionView::Template::Error (Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1):
+    1:  $("#subcategories").html("<%= escape_javascript(collection_select :product,:subcategory_id,@subcategories,:id,:name,:prompt=>"Select a Subcategory", :class => 'droplist')%>");
+  app/views/subcategories/load_subcategories.js.erb:1:in `_app_views_subcategories_load_subcategories_js_erb__168587440_82738090_151870508'
+  app/controllers/subcategories_controller.rb:16:in `load_subcategories'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  [1m[36mSubcategory Load (0.2ms)[0m  [1mSELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1[0m
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+  [1m[35mSubcategory Load (0.3ms)[0m  SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (49.5ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (53.3ms)
+
+
+Started GET "/subcategories/load_subcategories?id=" for 127.0.0.1 at 2011-09-08 20:01:42 +0530
+  Processing by SubcategoriesController#load_subcategories as 
+  Parameters: {"id"=>""}
+  [1m[36mSubcategory Load (0.3ms)[0m  [1mSELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 0[0m
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 0
+Rendered subcategories/load_subcategories.js.erb (1.2ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 0):
+    1:  $("#subcategories").html("<%= escape_javascript(collection_select :product,:subcategory_id,@subcategories,:id,:name,:prompt=>"Select a Subcategory", :class => 'droplist')%>");
+  app/views/subcategories/load_subcategories.js.erb:1:in `_app_views_subcategories_load_subcategories_js_erb__168587440_85157380_151870508'
+  app/controllers/subcategories_controller.rb:16:in `load_subcategories'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  [1m[35mSubcategory Load (0.2ms)[0m  SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 0
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 0
+  [1m[36mSubcategory Load (0.1ms)[0m  [1mSELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 0[0m
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 0
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (50.2ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (53.8ms)
+
+
+Started GET "/subcategories/load_subcategories?id=1" for 127.0.0.1 at 2011-09-08 20:01:44 +0530
+  Processing by SubcategoriesController#load_subcategories as 
+  Parameters: {"id"=>"1"}
+  [1m[35mSubcategory Load (0.3ms)[0m  SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Rendered subcategories/load_subcategories.js.erb (1.2ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1):
+    1:  $("#subcategories").html("<%= escape_javascript(collection_select :product,:subcategory_id,@subcategories,:id,:name,:prompt=>"Select a Subcategory", :class => 'droplist')%>");
+  app/views/subcategories/load_subcategories.js.erb:1:in `_app_views_subcategories_load_subcategories_js_erb__168587440_84116510_151870508'
+  app/controllers/subcategories_controller.rb:16:in `load_subcategories'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  [1m[36mSubcategory Load (0.2ms)[0m  [1mSELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1[0m
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+  [1m[35mSubcategory Load (0.1ms)[0m  SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (50.0ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (53.7ms)
+
+
+Started GET "/subcategories/load_subcategories?id=" for 127.0.0.1 at 2011-09-08 20:01:50 +0530
+  Processing by SubcategoriesController#load_subcategories as 
+  Parameters: {"id"=>""}
+  [1m[36mSubcategory Load (0.3ms)[0m  [1mSELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 0[0m
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 0
+Rendered subcategories/load_subcategories.js.erb (1.1ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 0):
+    1:  $("#subcategories").html("<%= escape_javascript(collection_select :product,:subcategory_id,@subcategories,:id,:name,:prompt=>"Select a Subcategory", :class => 'droplist')%>");
+  app/views/subcategories/load_subcategories.js.erb:1:in `_app_views_subcategories_load_subcategories_js_erb__168587440_83698940_151870508'
+  app/controllers/subcategories_controller.rb:16:in `load_subcategories'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  [1m[35mSubcategory Load (0.3ms)[0m  SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 0
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 0
+  [1m[36mSubcategory Load (0.1ms)[0m  [1mSELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 0[0m
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 0
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (50.3ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (53.9ms)
+
+
+Started GET "/subcategories/load_subcategories?id=1" for 127.0.0.1 at 2011-09-08 20:01:52 +0530
+  Processing by SubcategoriesController#load_subcategories as 
+  Parameters: {"id"=>"1"}
+  [1m[35mSubcategory Load (0.4ms)[0m  SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Rendered subcategories/load_subcategories.js.erb (24.7ms)
+Completed 500 Internal Server Error in 38ms
+
+ActionView::Template::Error (Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1):
+    1:  $("#subcategories").html("<%= escape_javascript(collection_select :product,:subcategory_id,@subcategories,:id,:name,:prompt=>"Select a Subcategory", :class => 'droplist')%>");
+  app/views/subcategories/load_subcategories.js.erb:1:in `_app_views_subcategories_load_subcategories_js_erb__168587440_83566230_151870508'
+  app/controllers/subcategories_controller.rb:16:in `load_subcategories'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  [1m[36mSubcategory Load (0.3ms)[0m  [1mSELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1[0m
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+  [1m[35mSubcategory Load (0.1ms)[0m  SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (26.5ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (30.3ms)
+
+
+Started GET "/users/confirmation/new" for 127.0.0.1 at 2011-09-08 20:02:16 +0530
+  Processing by Devise::ConfirmationsController#new as HTML
+Rendered devise/shared/_links.erb (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered devise/confirmations/new.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 28ms (Views: 19.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 20:17:21 +0530
+  Processing by ProductsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered products/_form.html.erb (26.7ms)
+Rendered products/new.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 90ms (Views: 32.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/subcategories/load_subcategories?id=1" for 127.0.0.1 at 2011-09-08 20:17:23 +0530
+  Processing by SubcategoriesController#load_subcategories as 
+  Parameters: {"id"=>"1"}
+  [1m[35mSubcategory Load (0.3ms)[0m  SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Rendered subcategories/load_subcategories.js.erb (1.2ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1):
+    1:  $("#subcategories").html("<%= escape_javascript(collection_select :product,:subcategory_id,@subcategories,:id,:name,:prompt=>"Select a Subcategory", :class => 'droplist')%>");
+  app/views/subcategories/load_subcategories.js.erb:1:in `_app_views_subcategories_load_subcategories_js_erb__168587440_74614590_151870508'
+  app/controllers/subcategories_controller.rb:16:in `load_subcategories'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  [1m[36mSubcategory Load (0.3ms)[0m  [1mSELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1[0m
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+  [1m[35mSubcategory Load (0.2ms)[0m  SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (54.3ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (58.1ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2011-09-08 20:17:31 +0530
+  Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "product"=>{"category_id"=>"1", "subcategory_id"=>"", "productname"=>"", "price"=>"", "weight"=>"", "avatar"=>#<ActionDispatch::Http::UploadedFile:0xa439914 @original_filename="rails.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[avatar]\"; filename=\"rails.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<File:/tmp/RackMultipart20110908-7240-saqycv>>, "file"=>#<ActionDispatch::Http::UploadedFile:0xa4398ec @original_filename="sample.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"product[file]\"; filename=\"sample.pdf\"\r\nContent-Type: application/pdf\r\n", @tempfile=#<File:/tmp/RackMultipart20110908-7240-kbv304>>}, "commit"=>"Create Product"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mdescribe `products`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `products` (`productname`, `price`, `weight`, `category_id`, `subcategory_id`, `created_at`, `updated_at`, `file_file_name`, `file_content_type`, `file_file_size`, `file_updated_at`, `avatar_file_name`, `avatar_content_type`, `avatar_file_size`, `avatar_updated_at`) VALUES (NULL, NULL, NULL, NULL, NULL, '2011-09-08 14:47:31', '2011-09-08 14:47:31', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+[paperclip] Saving attachments.
+  [1m[36mSQL (45.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/products/3
+Completed 302 Found in 236ms
+
+
+Started GET "/products/3" for 127.0.0.1 at 2011-09-08 20:17:32 +0530
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1[0m
+Rendered products/show.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 76ms (Views: 14.8ms | ActiveRecord: 47.1ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-08 20:18:36 +0530
+  Processing by ProductsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered products/_form.html.erb (57.5ms)
+Rendered products/new.html.erb within layouts/application (60.3ms)
+Completed 200 OK in 92ms (Views: 63.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/subcategories/load_subcategories?id=1" for 127.0.0.1 at 2011-09-08 20:18:38 +0530
+  Processing by SubcategoriesController#load_subcategories as 
+  Parameters: {"id"=>"1"}
+  [1m[35mSubcategory Load (0.3ms)[0m  SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Rendered subcategories/load_subcategories.js.erb (1.2ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1):
+    1:  $("#subcategories").html("<%= escape_javascript(collection_select :product,:subcategory_id,@subcategories,:id,:name,:prompt=>"Select a Subcategory", :class => 'droplist')%>");
+  app/views/subcategories/load_subcategories.js.erb:1:in `_app_views_subcategories_load_subcategories_js_erb__168587440_83908020_151870508'
+  app/controllers/subcategories_controller.rb:16:in `load_subcategories'
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  [1m[36mSubcategory Load (0.2ms)[0m  [1mSELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1[0m
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+  [1m[35mSubcategory Load (0.2ms)[0m  SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Mysql2::Error: Unknown column 'subcategories.category_id' in 'where clause': SELECT id,name FROM `subcategories` WHERE `subcategories`.`category_id` = 1
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (52.1ms)
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (55.8ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2011-09-08 20:18:48 +0530
+  Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esJnaq3cJz429qBaRhQd7hU+c5EHl3a4BBblArJlAMU=", "product"=>{"category_id"=>"1", "subcategory_id"=>"", "productname"=>"", "price"=>"", "weight"=>"", "avatar"=>#<ActionDispatch::Http::UploadedFile:0xa3511c8 @original_filename="News_updates_at_Indigenius_solutions_pvt_Ltd.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[avatar]\"; filename=\"News_updates_at_Indigenius_solutions_pvt_Ltd.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<File:/tmp/RackMultipart20110908-7240-faj20r>>, "file"=>#<ActionDispatch::Http::UploadedFile:0xa3511a0 @original_filename="sample.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"product[file]\"; filename=\"sample.pdf\"\r\nContent-Type: application/pdf\r\n", @tempfile=#<File:/tmp/RackMultipart20110908-7240-1bnc8ds>>}, "commit"=>"Create Product"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `products`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `products` (`productname`, `price`, `weight`, `category_id`, `subcategory_id`, `created_at`, `updated_at`, `file_file_name`, `file_content_type`, `file_file_size`, `file_updated_at`, `avatar_file_name`, `avatar_content_type`, `avatar_file_size`, `avatar_updated_at`) VALUES (NULL, NULL, NULL, NULL, NULL, '2011-09-08 14:48:48', '2011-09-08 14:48:48', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+[paperclip] Saving attachments.
+  [1m[36mSQL (38.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/products/4
+Completed 302 Found in 263ms
+
+
+Started GET "/products/4" for 127.0.0.1 at 2011-09-08 20:18:48 +0530
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Rendered products/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 42ms (Views: 14.5ms | ActiveRecord: 39.9ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+
+
+Started GET "/models/sign_in" for 127.0.0.1 at 2011-09-09 11:57:00 +0530
+
+ActionController::RoutingError (No route matches "/models/sign_in"):
+  
+
+Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-09 11:57:06 +0530
+  Processing by ProductsController#index as HTML
+Completed   in 7ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-09 11:57:06 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.3ms)
+Rendered devise/sessions/new.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 96ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-09-09 11:57:19 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cp1ZOgbTCo9suNGIlAe3igGXEJW232fdCtedgsi92eY=", "user"=>{"email"=>"mallikarjunrao@indigenius.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'mallikarjunrao@indigenius.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE `users` SET `current_sign_in_at` = '2011-09-09 06:27:19', `sign_in_count` = 2, `updated_at` = '2011-09-09 06:27:19' WHERE `users`.`id` = 1
+  [1m[36mSQL (53.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 301ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-09 11:57:19 +0530
+  Processing by ProductsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+Rendered products/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 106ms (Views: 30.9ms | ActiveRecord: 55.3ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-09 11:57:22 +0530
+  Processing by ProductsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered products/_form.html.erb (73.3ms)
+Rendered products/new.html.erb within layouts/application (82.8ms)
+Completed 200 OK in 124ms (Views: 96.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2011-09-09 11:57:37 +0530
+  Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cp1ZOgbTCo9suNGIlAe3igGXEJW232fdCtedgsi92eY=", "product"=>{"category_id"=>"", "subcategory_id"=>"", "productname"=>"", "price"=>"", "weight"=>"", "avatar"=>#<ActionDispatch::Http::UploadedFile:0xae4f14c @original_filename="rails.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[avatar]\"; filename=\"rails.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<File:/tmp/RackMultipart20110909-1960-1ycoi0v>>, "file"=>#<ActionDispatch::Http::UploadedFile:0xae4f124 @original_filename="examples.desktop", @content_type="application/x-desktop", @headers="Content-Disposition: form-data; name=\"product[file]\"; filename=\"examples.desktop\"\r\nContent-Type: application/x-desktop\r\n", @tempfile=#<File:/tmp/RackMultipart20110909-1960-s72zgn>>}, "commit"=>"Create Product"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  describe `products`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `products` (`productname`, `price`, `weight`, `category_id`, `subcategory_id`, `created_at`, `updated_at`, `file_file_name`, `file_content_type`, `file_file_size`, `file_updated_at`, `avatar_file_name`, `avatar_content_type`, `avatar_file_size`, `avatar_updated_at`) VALUES (NULL, NULL, NULL, NULL, NULL, '2011-09-09 06:27:37', '2011-09-09 06:27:37', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (55.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/products/5
+Completed 302 Found in 266ms
+
+
+Started GET "/products/5" for 127.0.0.1 at 2011-09-09 11:57:37 +0530
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 5 LIMIT 1
+Rendered products/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 49ms (Views: 20.8ms | ActiveRecord: 56.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-09-09 11:57:39 +0530
+  Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products`
+Rendered products/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 77ms (Views: 17.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-09-09 12:09:28 +0530
+  Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT `products`.* FROM `products`
+Rendered products/index.html.erb within layouts/application (43.3ms)
+Completed 200 OK in 74ms (Views: 46.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-09 12:09:30 +0530
+  Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered products/_form.html.erb (58.6ms)
+Rendered products/new.html.erb within layouts/application (61.4ms)
+Completed 200 OK in 93ms (Views: 64.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2011-09-09 12:09:59 +0530
+  Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cp1ZOgbTCo9suNGIlAe3igGXEJW232fdCtedgsi92eY=", "product"=>{"category_id"=>"", "subcategory_id"=>"", "productname"=>"", "price"=>"", "weight"=>"", "avatar"=>#<ActionDispatch::Http::UploadedFile:0xb07302c @original_filename="show.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[avatar]\"; filename=\"show.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20110909-1960-1qr5g8e>>, "file"=>#<ActionDispatch::Http::UploadedFile:0xb073004 @original_filename="examples.desktop", @content_type="application/x-desktop", @headers="Content-Disposition: form-data; name=\"product[file]\"; filename=\"examples.desktop\"\r\nContent-Type: application/x-desktop\r\n", @tempfile=#<File:/tmp/RackMultipart20110909-1960-q6055c>>}, "commit"=>"Create Product"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mdescribe `products`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `products` (`productname`, `price`, `weight`, `category_id`, `subcategory_id`, `created_at`, `updated_at`, `file_file_name`, `file_content_type`, `file_file_size`, `file_updated_at`, `avatar_file_name`, `avatar_content_type`, `avatar_file_size`, `avatar_updated_at`) VALUES ('', NULL, NULL, '', '', '2011-09-09 06:39:59', '2011-09-09 06:39:59', 'examples.desktop', 'application/x-desktop', 179, '2011-09-09 06:39:59', 'show.jpg', 'image/jpeg', 829, '2011-09-09 06:39:59')
+[paperclip] Saving attachments.
+[paperclip] saving /home/malli/devise/public/system/files/6/original/examples.desktop
+[paperclip] saving /home/malli/devise/public/system/avatars/6/original/show.jpg
+  [1m[36mSQL (68.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/products/6
+Completed 302 Found in 264ms
+
+
+Started GET "/products/6" for 127.0.0.1 at 2011-09-09 12:09:59 +0530
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 6 LIMIT 1[0m
+Rendered products/show.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 44ms (Views: 14.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-09-09 12:10:01 +0530
+  Processing by ProductsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+Rendered products/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 77ms (Views: 17.7ms | ActiveRecord: 69.4ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20110907135730)
+Migrating to CreateProducts (20110908073616)
+Migrating to CreateCategories (20110908123731)
+Migrating to CreateSubcategories (20110908123953)
+Migrating to AddToPhotos (20110908135845)
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE `products` ADD `file_file_name` varchar(255)
+Mysql2::Error: Duplicate column name 'file_file_name': ALTER TABLE `products` ADD `file_file_name` varchar(255)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20110907135730)
+Migrating to CreateProducts (20110908073616)
+Migrating to CreateCategories (20110908123731)
+Migrating to CreateSubcategories (20110908123953)
+Migrating to AddToPhotos (20110908135845)
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE `products` ADD `file_file_name` varchar(255)
+Mysql2::Error: Table 'devise_development.products' doesn't exist: ALTER TABLE `products` ADD `file_file_name` varchar(255)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20110907135730)
+Migrating to CreateProducts (20110908073616)
+Migrating to CreateCategories (20110908123731)
+Migrating to CreateSubcategories (20110908123953)
+Migrating to AddToPhotos (20110908135845)
+  [1m[35mSQL (70.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20110908135845')
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.1ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  describe `categories`
+  [1m[36mSQL (0.1ms)[0m  [1mSHOW KEYS FROM `categories`[0m
+  [1m[35mSQL (0.3ms)[0m  describe `subcategories`
+  [1m[36mSQL (0.1ms)[0m  [1mSHOW KEYS FROM `subcategories`[0m
+  [1m[35mSQL (0.4ms)[0m  describe `users`
+  [1m[36mSQL (0.1ms)[0m  [1mSHOW KEYS FROM `users`[0m
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (122.3ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (192.1ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20110907135730)
+  [1m[35mSQL (83.8ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `password_salt` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `remember_token` varchar(255), `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `role` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `users`[0m
+  [1m[35mSQL (200.6ms)[0m  CREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW KEYS FROM `users`[0m
+  [1m[35mSQL (183.8ms)[0m  CREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)
+  [1m[36mSQL (28.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110907135730')[0m
+Migrating to CreateProducts (20110908073616)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20110907135730)
+Migrating to CreateProducts (20110908073616)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/malli/devise/config/environment.rb:5)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20110907135730)
+Migrating to CreateProducts (20110908073616)
+  [1m[35mSQL (113.7ms)[0m  CREATE TABLE `products` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `productname` varchar(255), `price` int(11), `weight` int(11), `category_id` varchar(255), `subcategory_id` varchar(255), `file_file_name` varchar(255), `file_content_type` varchar(255), `file_file_size` int(11), `file_updated_at` datetime, `avatar_file_name` varchar(255), `avatar_content_type` varchar(255), `avatar_file_size` int(11), `avatar_updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (46.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110908073616')[0m
+Migrating to CreateCategories (20110908123731)
+  [1m[35mSQL (116.2ms)[0m  CREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (49.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110908123731')[0m
+Migrating to CreateSubcategories (20110908123953)
+  [1m[35mSQL (114.9ms)[0m  CREATE TABLE `subcategories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `categorie_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (49.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110908123953')[0m
+Migrating to AddToPhotos (20110908135845)
+  [1m[35mSQL (56.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20110908135845')
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.1ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  describe `categories`
+  [1m[36mSQL (0.1ms)[0m  [1mSHOW KEYS FROM `categories`[0m
+  [1m[35mSQL (0.3ms)[0m  describe `products`
+  [1m[36mSQL (0.1ms)[0m  [1mSHOW KEYS FROM `products`[0m
+  [1m[35mSQL (0.3ms)[0m  describe `subcategories`
+  [1m[36mSQL (0.1ms)[0m  [1mSHOW KEYS FROM `subcategories`[0m
+  [1m[35mSQL (0.4ms)[0m  describe `users`
+  [1m[36mSQL (0.1ms)[0m  [1mSHOW KEYS FROM `users`[0m
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-09 13:00:42 +0530
+  Processing by ProductsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed   in 9ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-09 13:00:42 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.1ms)
+Rendered devise/sessions/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 57ms (Views: 9.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-09-09 13:00:47 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (1.2ms)
+Rendered devise/registrations/new.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 37ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-09-09 13:00:55 +0530
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cp1ZOgbTCo9suNGIlAe3igGXEJW232fdCtedgsi92eY=", "user"=>{"email"=>"mallikarjunrao@indigenius.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"admin"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('mallikarjunrao@indigenius.com')) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`confirmation_token` = 'AtTnVcfrZMfcPeyXPoYN' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  describe `users`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `users` (`email`, `encrypted_password`, `password_salt`, `reset_password_token`, `remember_token`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `role`, `created_at`, `updated_at`) VALUES ('mallikarjunrao@indigenius.com', '$2a$10$5kD/ptPz6goDhvUhXVmAM.REE3WNhZEWKLE3Oicri9VGBBNDaqIkW', '$2a$10$5kD/ptPz6goDhvUhXVmAM.', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 'AtTnVcfrZMfcPeyXPoYN', NULL, '2011-09-09 07:30:55', 'admin', '2011-09-09 07:30:55', '2011-09-09 07:30:55')[0m
+Rendered devise/mailer/confirmation_instructions.html.erb (0.6ms)
+
+Sent mail to mallikarjunrao@indigenius.com (6443ms)
+Date: Fri, 09 Sep 2011 13:00:55 +0530
+From: mallikarjunrao@indigenius.com
+To: mallikarjunrao@indigenius.com
+Message-ID: <4e69c0af82068_7a85900a883942f@malli.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome mallikarjunrao@indigenius.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=AtTnVcfrZMfcPeyXPoYN">Confirm my account</a></p>
+  [1m[35mSQL (114.4ms)[0m  COMMIT
+Completed   in 6833ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-09 13:01:02 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.2ms)
+Rendered devise/sessions/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 56ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/confirmation?confirmation_token=AtTnVcfrZMfcPeyXPoYN" for 127.0.0.1 at 2011-09-09 13:01:21 +0530
+  Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"AtTnVcfrZMfcPeyXPoYN"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`confirmation_token` = 'AtTnVcfrZMfcPeyXPoYN' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE `users` SET `confirmation_token` = NULL, `confirmed_at` = '2011-09-09 07:31:21', `updated_at` = '2011-09-09 07:31:21' WHERE `users`.`id` = 1[0m
+  [1m[35mSQL (48.7ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2011-09-09 07:31:21', `current_sign_in_at` = '2011-09-09 07:31:21', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2011-09-09 07:31:21' WHERE `users`.`id` = 1
+  [1m[36mSQL (32.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/products/new
+Completed 302 Found in 107ms
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-09-09 13:01:21 +0530
+  Processing by ProductsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered products/_form.html.erb (22.4ms)
+Rendered products/new.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 89ms (Views: 27.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2011-09-09 13:01:35 +0530
+  Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cp1ZOgbTCo9suNGIlAe3igGXEJW232fdCtedgsi92eY=", "product"=>{"category_id"=>"", "subcategory_id"=>"", "productname"=>"", "price"=>"", "weight"=>"", "avatar"=>#<ActionDispatch::Http::UploadedFile:0xa7b0994 @original_filename="facebook.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[avatar]\"; filename=\"facebook.jpeg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20110909-1960-1f5w01>>, "file"=>#<ActionDispatch::Http::UploadedFile:0xa7b0958 @original_filename="3.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"product[file]\"; filename=\"3.pdf\"\r\nContent-Type: application/pdf\r\n", @tempfile=#<File:/tmp/RackMultipart20110909-1960-fu22wg>>}, "commit"=>"Create Product"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  describe `products`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `products` (`productname`, `price`, `weight`, `category_id`, `subcategory_id`, `file_file_name`, `file_content_type`, `file_file_size`, `file_updated_at`, `avatar_file_name`, `avatar_content_type`, `avatar_file_size`, `avatar_updated_at`) VALUES ('', NULL, NULL, '', '', '3.pdf', 'application/pdf', 1093, '2011-09-09 07:31:35', 'facebook.jpeg', 'image/jpeg', 399, '2011-09-09 07:31:35')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/malli/devise/public/system/files/1/original/3.pdf
+[paperclip] saving /home/malli/devise/public/system/avatars/1/original/facebook.jpeg
+  [1m[35mSQL (34.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 239ms
+
+
+Started GET "/products/1" for 127.0.0.1 at 2011-09-09 13:01:35 +0530
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+Rendered products/show.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 42ms (Views: 13.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-09-09 13:01:37 +0530
+  Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+Rendered products/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 42ms (Views: 14.2ms | ActiveRecord: 0.3ms)

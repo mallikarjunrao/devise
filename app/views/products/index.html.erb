@@ -19,6 +19,7 @@
   <% elsif current_user.role == "admin"%>
     <td><%= link_to 'Edit', edit_product_path(product) %></td>
     <td><%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></td>
+ <td><%= link_to image_tag("/images/show.jpg"), employee %></td>
   <% end%>
   </tr>
 <% end %>
